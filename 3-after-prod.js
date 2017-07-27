@@ -4,6 +4,10 @@ import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
+var _ref = _jsx('div', {
+  className: 'will be transformed to constant'
+});
+
 export default class Home extends React.Component {
   handleClick() {}
 
@@ -30,9 +34,7 @@ export default class Home extends React.Component {
     }, void 0, 'Home'), _jsx('span', {
       className: `${'css-15dla7k'}`,
       onClick: this.handleClick
-    }, void 0, 'Open Fade Overlay'), _jsx('div', {
-      className: 'will be transformed to constant'
-    }), _jsx('div', {
+    }, void 0, 'Open Fade Overlay'), _ref, _jsx('div', {
       className: `will not be transformed to constant`
     }), _jsx('div', {
       className: this.state.isUpdated

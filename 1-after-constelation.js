@@ -6,6 +6,7 @@ export default class Home extends React.Component {
 
   render() {
     const grow = 1;
+    const spreadBreaksInlineAndConstant = {};
 
     return <div css={`display: flex;flex-direction: column;flex-shrink: 0;align-content: flex-start;position: relative;align-items: center;justify-content: center;flex-grow: ${grow};`}>
         <nav css={`display: flex;flex-direction: column;flex-shrink: 0;align-content: flex-start;position: relative;width: 300px;height: 30px;margin: 20px;
@@ -36,6 +37,16 @@ export default class Home extends React.Component {
           `} onClick={this.handleClick}>
           Open Fade Overlay
         </span>
+
+        <div className="will be transformed to constant" />
+        <div className={`will not be transformed to constant`} />
+        <div className={this.state.isUpdated} />
+        <div className={grow} />
+
+        <div ref={() => console.log('This messes up constant and inline')} />
+
+        <div {...spreadBreaksInlineAndConstant} />
+
       </div>;
   }
 }

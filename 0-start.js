@@ -6,6 +6,7 @@ export default class Home extends React.Component {
 
   render() {
     const grow = 1
+    const spreadBreaksInlineAndConstant = {}
 
     return (
       <col
@@ -63,6 +64,18 @@ export default class Home extends React.Component {
         >
           Open Fade Overlay
         </text>
+
+        <div className='will be transformed to constant'/>
+        <div className={`will not be transformed to constant`}/>
+        <div className={this.state.isUpdated} />
+        <div className={grow} />
+
+        <div
+          ref={() => console.log('This messes up constant and inline')}
+        />
+
+        <div {...spreadBreaksInlineAndConstant}/>
+
       </col>
     )
   }

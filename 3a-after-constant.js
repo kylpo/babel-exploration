@@ -2,11 +2,14 @@ import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
+var _ref = <div className="will be transformed to constant" />;
+
 export default class Home extends React.Component {
   handleClick() {}
 
   render() {
     const grow = 1;
+    const spreadBreaksInlineAndConstant = {};
 
     return <div className={css(['css-1s18j1e'], [grow])}>
         <nav className={`${'css-kssq5x'}`} />
@@ -26,6 +29,16 @@ export default class Home extends React.Component {
         <span className={`${'css-15dla7k'}`} onClick={this.handleClick}>
           Open Fade Overlay
         </span>
+
+        {_ref}
+        <div className={`will not be transformed to constant`} />
+        <div className={this.state.isUpdated} />
+        <div className={grow} />
+
+        <div ref={() => console.log('This messes up constant and inline')} />
+
+        <div {...spreadBreaksInlineAndConstant} />
+
       </div>;
   }
 }
