@@ -3,8 +3,9 @@
 // Preset ordering is reversed (last to first).
 {
   "plugins": [
+    "syntax-jsx",
     /* "./babel/constelation", */
-    "constelation-babel",
+    /* "constelation-babel", */
 
     /* ["emotion/babel", { "inline": true }], */
     /* "emotion/babel", */
@@ -23,19 +24,19 @@
 
     // replaces react.createElement with inline if no ref or obj spread
     /* "transform-react-inline-elements", */
-  ],
-  "presets": [
-    ["es2015",
-      {
-        // enable _native_ modules for tree shaking
-        "modules": false,
-        "loose": true,
-      }
-    ],
-    "react",
-
-    // class properties and beyond
-    "stage-2"
   ]
-  }
+  /* ], */
+  /* "presets": [ */
+  /*   ["es2015", */
+  /*     { */
+  /*       // enable _native_ modules for tree shaking */
+  /*       "modules": false, */
+  /*       "loose": true, */
+  /*     } */
+  /*   ], */
+  /*   "react", */
+  /*  */
+  /*   // class properties and beyond */
+  /*   "stage-2" */
+  /* ] */
 }
