@@ -4,8 +4,29 @@ import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
-var _ref = _jsx('div', {
+var _ref = _jsx('div', {});
+
+const CompositeFunctionComponent = () => _ref;
+
+class CompositeClassComponent extends React.Component {
+
+  render() {
+    return _jsx('div', {
+      something: this.context.yep
+    });
+  }
+}
+
+var _ref2 = _jsx('div', {
   className: 'will be transformed to constant'
+});
+
+var _ref3 = _jsx(CompositeFunctionComponent, {
+  something: true
+});
+
+var _ref4 = _jsx(CompositeClassComponent, {
+  somethingElse: true
 });
 
 export default class Home extends React.Component {
@@ -34,12 +55,12 @@ export default class Home extends React.Component {
     }, void 0, 'Home'), _jsx('span', {
       className: `${'css-15dla7k'}`,
       onClick: this.handleClick
-    }, void 0, 'Open Fade Overlay'), _ref, _jsx('div', {
+    }, void 0, 'Open Fade Overlay'), _ref2, _jsx('div', {
       className: `will not be transformed to constant`
     }), _jsx('div', {
       className: this.state.isUpdated
     }), _jsx('div', {
       className: grow
-    }), <div ref={() => console.log('This messes up constant and inline')} />, <div {...spreadBreaksInlineAndConstant} />);
+    }), <div ref={() => console.log('This messes up constant and inline')} />, <div {...spreadBreaksInlineAndConstant} />, _ref3, _ref4);
   }
 }

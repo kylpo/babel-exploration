@@ -2,7 +2,22 @@ import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
-var _ref = <div className="will be transformed to constant" />;
+var _ref = <div />;
+
+const CompositeFunctionComponent = () => _ref;
+
+class CompositeClassComponent extends React.Component {
+
+  render() {
+    return <div something={this.context.yep} />;
+  }
+}
+
+var _ref2 = <div className="will be transformed to constant" />;
+
+var _ref3 = <CompositeFunctionComponent something />;
+
+var _ref4 = <CompositeClassComponent somethingElse />;
 
 export default class Home extends React.Component {
   handleClick() {}
@@ -30,7 +45,7 @@ export default class Home extends React.Component {
           Open Fade Overlay
         </span>
 
-        {_ref}
+        {_ref2}
         <div className={`will not be transformed to constant`} />
         <div className={this.state.isUpdated} />
         <div className={grow} />
@@ -38,6 +53,9 @@ export default class Home extends React.Component {
         <div ref={() => console.log('This messes up constant and inline')} />
 
         <div {...spreadBreaksInlineAndConstant} />
+
+        {_ref3}
+        {_ref4}
 
       </div>;
   }

@@ -4,6 +4,17 @@ import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
+const CompositeFunctionComponent = () => _jsx('div', {});
+
+class CompositeClassComponent extends React.Component {
+
+  render() {
+    return _jsx('div', {
+      something: this.context.yep
+    });
+  }
+}
+
 export default class Home extends React.Component {
   handleClick() {}
 
@@ -38,6 +49,10 @@ export default class Home extends React.Component {
       className: this.state.isUpdated
     }), _jsx('div', {
       className: grow
-    }), <div ref={() => console.log('This messes up constant and inline')} />, <div {...spreadBreaksInlineAndConstant} />);
+    }), <div ref={() => console.log('This messes up constant and inline')} />, <div {...spreadBreaksInlineAndConstant} />, _jsx(CompositeFunctionComponent, {
+      something: true
+    }), _jsx(CompositeClassComponent, {
+      somethingElse: true
+    }));
   }
 }

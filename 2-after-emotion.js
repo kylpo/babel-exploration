@@ -2,6 +2,15 @@ import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
+const CompositeFunctionComponent = () => <div />;
+
+class CompositeClassComponent extends React.Component {
+
+  render() {
+    return <div something={this.context.yep} />;
+  }
+}
+
 export default class Home extends React.Component {
   handleClick() {}
 
@@ -36,6 +45,9 @@ export default class Home extends React.Component {
         <div ref={() => console.log('This messes up constant and inline')} />
 
         <div {...spreadBreaksInlineAndConstant} />
+
+        <CompositeFunctionComponent something />
+        <CompositeClassComponent somethingElse />
 
       </div>;
   }
