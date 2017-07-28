@@ -4,6 +4,10 @@ import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
+const COMPOSE_ME = `${'css-COMPOSE_ME-16h2ri0'}`;
+
+const COMPOSE_ME_TOO = `${'css-COMPOSE_ME_TOO-16h2ri0'}`;
+
 const CompositeFunctionComponent = () => _jsx('div', {});
 
 class CompositeClassComponent extends React.Component {
@@ -36,9 +40,13 @@ export default class Home extends React.Component {
       className: `${'css-asuv6'}`
     }), _jsx('div', {
       className: `${'css-cb9ahb'}`
-    })), _jsx('span', {
+    })), _jsx('div', {
+      className: `${'css-1ibztja'}`
+    }), _jsx('span', {
       className: `${'css-18gaxx6'}`
-    }, void 0, 'Home'), _jsx('span', {
+    }, void 0, 'Home'), _jsx('div', {
+      className: `${'css-1ibztja'}`
+    }), _jsx('span', {
       className: `${'css-15dla7k'}`,
       onClick: this.handleClick
     }, void 0, 'Open Fade Overlay'), _jsx('div', {
@@ -49,9 +57,17 @@ export default class Home extends React.Component {
       className: this.state.isUpdated
     }), _jsx('div', {
       className: grow
-    }), <div ref={() => console.log('This messes up constant and inline')} />, <div {...spreadBreaksInlineAndConstant} />, _jsx(CompositeFunctionComponent, {
+    }), _jsx('div', {
+      className: 'some-class-name' + ' ' + `${'css-qdl783'} ${COMPOSE_ME}`
+    }), _jsx('div', {
+      className: `${'css-slos8m'} ${COMPOSE_ME}`
+    }), <div ref={() => console.log('This messes up constant and inline')} />, _jsx('div', {
+      className: 'will it be transformed to constant?'
+    }, void 0, <div {...spreadBreaksInlineAndConstant} />), _jsx('div', {
+      className: 'will it be transformed to constant?'
+    }, void 0, _jsx(CompositeFunctionComponent, {
       something: true
-    }), _jsx(CompositeClassComponent, {
+    })), _jsx(CompositeClassComponent, {
       somethingElse: true
     }));
   }

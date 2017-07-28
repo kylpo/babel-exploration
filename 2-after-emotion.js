@@ -2,6 +2,10 @@ import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
+const COMPOSE_ME = `${'css-COMPOSE_ME-16h2ri0'}`;
+
+const COMPOSE_ME_TOO = `${'css-COMPOSE_ME_TOO-16h2ri0'}`;
+
 const CompositeFunctionComponent = () => <div />;
 
 class CompositeClassComponent extends React.Component {
@@ -29,9 +33,13 @@ export default class Home extends React.Component {
           <div className={`${'css-cb9ahb'}`} />
         </div>
 
+        <div className={`${'css-1ibztja'}`} />
+
         <span className={`${'css-18gaxx6'}`}>
           Home
         </span>
+
+        <div className={`${'css-1ibztja'}`} />
 
         <span className={`${'css-15dla7k'}`} onClick={this.handleClick}>
           Open Fade Overlay
@@ -42,11 +50,20 @@ export default class Home extends React.Component {
         <div className={this.state.isUpdated} />
         <div className={grow} />
 
+        <div className={'some-class-name' + ' ' + `${'css-qdl783'} ${COMPOSE_ME}`} />
+
+        <div className={`${'css-slos8m'} ${COMPOSE_ME}`} />
+
         <div ref={() => console.log('This messes up constant and inline')} />
 
-        <div {...spreadBreaksInlineAndConstant} />
+        <div className="will it be transformed to constant?">
+          <div {...spreadBreaksInlineAndConstant} />
+        </div>
 
-        <CompositeFunctionComponent something />
+        <div className="will it be transformed to constant?">
+          <CompositeFunctionComponent something />
+        </div>
+
         <CompositeClassComponent somethingElse />
 
       </div>;

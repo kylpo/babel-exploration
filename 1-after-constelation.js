@@ -1,6 +1,16 @@
 import React from 'react';
 import { css } from 'emotion';
 
+const COMPOSE_ME = css`
+  display: flex;
+  position: absolute;
+`;
+
+const COMPOSE_ME_TOO = css`
+  display: flex;
+  position: absolute;
+`;
+
 const CompositeFunctionComponent = () => <div />;
 
 class CompositeClassComponent extends React.Component {
@@ -36,9 +46,13 @@ export default class Home extends React.Component {
             `} />
         </div>
 
+        <div css={`flex-grow: 0;flex-shrink: 0;flex-basis: 40px;`} />
+
         <span css={`font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size: 20px;`}>
           Home
         </span>
+
+        <div css={`flex-grow: 0;flex-shrink: 0;flex-basis: 40px;`} />
 
         <span css={`font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size: 16px;
             padding: 16px;
@@ -52,11 +66,26 @@ export default class Home extends React.Component {
         <div className={this.state.isUpdated} />
         <div className={grow} />
 
+        <div className="some-class-name" css={`
+            composes: ${COMPOSE_ME};
+            background-color: red;
+          `} />
+
+        <div css={`
+            composes: ${COMPOSE_ME};
+            background-color: green;
+          `} />
+
         <div ref={() => console.log('This messes up constant and inline')} />
 
-        <div {...spreadBreaksInlineAndConstant} />
+        <div className="will it be transformed to constant?">
+          <div {...spreadBreaksInlineAndConstant} />
+        </div>
 
-        <CompositeFunctionComponent something />
+        <div className="will it be transformed to constant?">
+          <CompositeFunctionComponent something />
+        </div>
+
         <CompositeClassComponent somethingElse />
 
       </div>;

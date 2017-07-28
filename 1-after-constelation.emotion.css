@@ -1,3 +1,7 @@
+.css-COMPOSE_ME-16h2ri0 { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+  position: absolute; }
+.css-COMPOSE_ME_TOO-16h2ri0 { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+  position: absolute; }
 .css-1s18j1e { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;-webkit-flex-direction: column;-ms-flex-direction: column;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;-webkit-flex-shrink: 0;-ms-flex-negative: 0;flex-shrink: 0;-webkit-align-content: flex-start;-ms-flex-line-pack: start;align-content: flex-start;position: relative;-webkit-align-items: center;-ms-flex-align: center;-webkit-box-align: center;align-items: center;-webkit-justify-content: center;-ms-flex-pack: center;-webkit-box-pack: center;justify-content: center;-webkit-flex-grow: var(--css-1s18j1e-0);-ms-flex-positive: var(--css-1s18j1e-0);flex-grow: var(--css-1s18j1e-0); }
 .css-kssq5x { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;-webkit-flex-direction: column;-ms-flex-direction: column;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;-webkit-flex-shrink: 0;-ms-flex-negative: 0;flex-shrink: 0;-webkit-align-content: flex-start;-ms-flex-line-pack: start;align-content: flex-start;position: relative;width: 300px;height: 30px;margin: 20px;
             background-color: purple; }
@@ -9,7 +13,13 @@
               background-color: green; }
 .css-cb9ahb { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;-webkit-flex-direction: column;-ms-flex-direction: column;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;-webkit-flex-shrink: 0;-ms-flex-negative: 0;flex-shrink: 0;-webkit-align-content: flex-start;-ms-flex-line-pack: start;align-content: flex-start;position: relative;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1;
               background-color: blue; }
+.css-1ibztja { -webkit-flex-grow: 0; -ms-flex-positive: 0; flex-grow: 0;-webkit-flex-shrink: 0;-ms-flex-negative: 0;flex-shrink: 0;-webkit-flex-basis: 40px;-ms-preferred-size: 40px;flex-basis: 40px; }
 .css-18gaxx6 { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size: 20px; }
+.css-1ibztja { -webkit-flex-grow: 0; -ms-flex-positive: 0; flex-grow: 0;-webkit-flex-shrink: 0;-ms-flex-negative: 0;flex-shrink: 0;-webkit-flex-basis: 40px;-ms-preferred-size: 40px;flex-basis: 40px; }
 .css-15dla7k { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size: 16px;
             padding: 16px;
             border: 1px solid #111; }
+.css-qdl783 {
+            background-color: red; }
+.css-slos8m {
+            background-color: green; }
