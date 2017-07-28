@@ -95,9 +95,14 @@ export default class Home extends React.Component {
 
         <div ref={() => console.log('This messes up constant and inline')} />
 
-        <div {...spreadBreaksInlineAndConstant} />
+        <div className="will it be transformed to constant?">
+          <div {...spreadBreaksInlineAndConstant} />
+        </div>
 
-        <CompositeFunctionComponent something />
+        <div className="will it be transformed to constant?">
+          <CompositeFunctionComponent something />
+        </div>
+
         <CompositeClassComponent somethingElse />
 
       </div>;

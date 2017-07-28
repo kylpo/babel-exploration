@@ -1,13 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run build:constelation && npm run build:emotion && npm run build:constant && npm run build:inline && npm run build:prod && npm run build:jsx",
+    "build": "npm run build:constelation && npm run build:emotion && npm run build:constant && npm run build:inline && npm run build:prod && npm run build:jsx && npm run build:emotion-inline && npm run build:prod-inline && npm run build:jsx-inline",
     "build:constelation": "babel 0-start.js --out-file 1-after-constelation.js --plugins=constelation-babel",
     "build:emotion": "babel 1-after-constelation.js --out-file 2-after-emotion.js --plugins=emotion/babel",
+    "build:emotion-inline": "BABEL_ENV='inline' babel 1-after-constelation.js --out-file 2b-after-emotion-inline.js",
     "build:constant": "babel 2-after-emotion.js --out-file 3a-after-constant.js --plugins=transform-react-constant-elements",
-    "build:inline": "babel 2-after-emotion.js --out-file 3b-after-inline.js --plugins=transform-react-inline-elements",
+    "build:inline": "babel 2-after-emotion.js --out-file 3b-after_inline.js --plugins=transform-react-inline-elements",
     "build:prod": "babel 2-after-emotion.js --out-file 3-after-prod.js --plugins=transform-react-constant-elements,transform-react-inline-elements",
-    "build:jsx": "babel 3-after-prod.js --out-file 4-after-jsx.js --plugins=transform-react-jsx"
+    "build:prod-inline": "babel 2b-after-emotion-inline.js --out-file 3b-after-prod_inline.js --plugins=transform-react-constant-elements,transform-react-inline-elements",
+    "build:jsx": "babel 3-after-prod.js --out-file 4-after-jsx.js --plugins=transform-react-jsx",
+    "build:jsx-inline": "babel 3b-after-prod_inline.js --out-file 4b-after-jsx_inline.js --plugins=transform-react-jsx"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

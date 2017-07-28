@@ -1,6 +1,13 @@
 {
   "plugins": [
     "syntax-jsx",
-    /* ["emotion/babel", { "inline": true }] */
-  ]
+  ],
+  "env": {
+    "inline": {
+      "plugins": [
+        ["emotion/babel", { "inline": true }]
+      ]
+    }
+  }
+
 }
