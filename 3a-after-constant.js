@@ -1,10 +1,20 @@
-import './1-after-constelation.emotion.css';
+import { css as _css } from 'emotion';
 import React from 'react';
 import { css } from 'emotion';
 
-const COMPOSE_ME = `${'css-COMPOSE_ME-16h2ri0'}`;
+const COMPOSE_ME = /*#__PURE__*/css([], [], function createEmotionStyledRules() {
+  return [{
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'position': 'absolute'
+  }];
+});
 
-const COMPOSE_ME_TOO = `${'css-COMPOSE_ME_TOO-16h2ri0'}`;
+const COMPOSE_ME_TOO = /*#__PURE__*/css([], [], function createEmotionStyledRules() {
+  return [{
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'position': 'absolute'
+  }];
+});
 
 var _ref = <div />;
 
@@ -32,26 +42,173 @@ export default class Home extends React.Component {
     const grow = 1;
     const spreadBreaksInlineAndConstant = {};
 
-    return <div className={css(['css-1s18j1e'], [grow])}>
-        <nav className={`${'css-kssq5x'}`} />
+    return <div className={/*#__PURE__*/_css([], [grow], function createEmotionStyledRules(x0) {
+      return [{
+        'display': '-webkit-box; display: -ms-flexbox; display: flex',
+        'WebkitBoxOrient': 'vertical',
+        'WebkitBoxDirection': 'normal',
+        'msFlexDirection': 'column',
+        'flexDirection': 'column',
+        'msFlexNegative': '0',
+        'flexShrink': '0',
+        'msFlexLinePack': 'start',
+        'alignContent': 'flex-start',
+        'position': 'relative',
+        'WebkitBoxAlign': 'center',
+        'msFlexAlign': 'center',
+        'alignItems': 'center',
+        'WebkitBoxPack': 'center',
+        'msFlexPack': 'center',
+        'justifyContent': 'center',
+        'WebkitBoxFlex': `${x0}`,
+        'msFlexPositive': `${x0}`,
+        'flexGrow': `${x0}`
+      }];
+    })}>
+        <nav className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': 'column',
+          'flexDirection': 'column',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'width': '300px',
+          'height': '30px',
+          'margin': '20px',
+          'backgroundColor': 'purple'
+        }];
+      })} />
 
-        <div className={`${'css-1ibztja'}`} />
+        <div className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'WebkitBoxFlex': '0',
+          'msFlexPositive': '0',
+          'flexGrow': '0',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexPreferredSize': '40px',
+          'flexBasis': '40px'
+        }];
+      })} />
 
-        <div className={css(['css-ypm15r'], [this.state.isUpdated ? 'column' : 'row'])}>
-          <div className={`${'css-10n0dl7'}`} />
-          <div className={`${'css-asuv6'}`} />
-          <div className={`${'css-cb9ahb'}`} />
+        <div className={/*#__PURE__*/_css([], [this.state.isUpdated ? 'column' : 'row'], function createEmotionStyledRules(x0) {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': `${x0}`,
+          'flexDirection': `${x0}`,
+          'height': '200px',
+          'width': '400px'
+        }];
+      })}>
+          <div className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+          return [{
+            'display': '-webkit-box; display: -ms-flexbox; display: flex',
+            'WebkitBoxOrient': 'vertical',
+            'WebkitBoxDirection': 'normal',
+            'msFlexDirection': 'column',
+            'flexDirection': 'column',
+            'msFlexNegative': '0',
+            'flexShrink': '0',
+            'msFlexLinePack': 'start',
+            'alignContent': 'flex-start',
+            'position': 'relative',
+            'WebkitBoxFlex': '1',
+            'msFlexPositive': '1',
+            'flexGrow': '1',
+            'backgroundColor': 'red'
+          }];
+        })} />
+          <div className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+          return [{
+            'display': '-webkit-box; display: -ms-flexbox; display: flex',
+            'WebkitBoxOrient': 'vertical',
+            'WebkitBoxDirection': 'normal',
+            'msFlexDirection': 'column',
+            'flexDirection': 'column',
+            'msFlexNegative': '0',
+            'flexShrink': '0',
+            'msFlexLinePack': 'start',
+            'alignContent': 'flex-start',
+            'position': 'relative',
+            'WebkitBoxFlex': '1',
+            'msFlexPositive': '1',
+            'flexGrow': '1',
+            'backgroundColor': 'green'
+          }];
+        })} />
+          <div className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+          return [{
+            'display': '-webkit-box; display: -ms-flexbox; display: flex',
+            'WebkitBoxOrient': 'vertical',
+            'WebkitBoxDirection': 'normal',
+            'msFlexDirection': 'column',
+            'flexDirection': 'column',
+            'msFlexNegative': '0',
+            'flexShrink': '0',
+            'msFlexLinePack': 'start',
+            'alignContent': 'flex-start',
+            'position': 'relative',
+            'WebkitBoxFlex': '1',
+            'msFlexPositive': '1',
+            'flexGrow': '1',
+            'backgroundColor': 'blue'
+          }];
+        })} />
         </div>
 
-        <div className={`${'css-1ibztja'}`} />
+        <div className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'WebkitBoxFlex': '0',
+          'msFlexPositive': '0',
+          'flexGrow': '0',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexPreferredSize': '40px',
+          'flexBasis': '40px'
+        }];
+      })} />
 
-        <span className={`${'css-18gaxx6'}`}>
+        <span className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'fontFamily': '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif',
+          'fontSize': '20px'
+        }];
+      })}>
           Home
         </span>
 
-        <div className={`${'css-1ibztja'}`} />
+        <div className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'WebkitBoxFlex': '0',
+          'msFlexPositive': '0',
+          'flexGrow': '0',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexPreferredSize': '40px',
+          'flexBasis': '40px'
+        }];
+      })} />
 
-        <span className={`${'css-15dla7k'}`} onClick={this.handleClick}>
+        <span className={/*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'fontFamily': '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif',
+          'fontSize': '16px',
+          'padding': '16px',
+          'border': '1px solid #111'
+        }];
+      })} onClick={this.handleClick}>
           Open Fade Overlay
         </span>
 
@@ -60,9 +217,17 @@ export default class Home extends React.Component {
         <div className={this.state.isUpdated} />
         <div className={grow} />
 
-        <div className={'some-class-name' + ' ' + `${'css-qdl783'} ${COMPOSE_ME}`} />
+        <div className={'some-class-name' + ' ' + /*#__PURE__*/_css([COMPOSE_ME], [], function createEmotionStyledRules() {
+        return [{
+          'backgroundColor': 'red'
+        }];
+      })} />
 
-        <div className={`${'css-slos8m'} ${COMPOSE_ME}`} />
+        <div className={/*#__PURE__*/_css([COMPOSE_ME], [], function createEmotionStyledRules() {
+        return [{
+          'backgroundColor': 'green'
+        }];
+      })} />
 
         <div ref={() => console.log('This messes up constant and inline')} />
 

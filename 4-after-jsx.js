@@ -20,13 +20,23 @@ var _jsx = function () {
   };
 }();
 
-import './1-after-constelation.emotion.css';
+import { css as _css } from 'emotion';
 import React from 'react';
 import { css } from 'emotion';
 
-const COMPOSE_ME = `${'css-COMPOSE_ME-16h2ri0'}`;
+const COMPOSE_ME = /*#__PURE__*/css([], [], function createEmotionStyledRules() {
+  return [{
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'position': 'absolute'
+  }];
+});
 
-const COMPOSE_ME_TOO = `${'css-COMPOSE_ME_TOO-16h2ri0'}`;
+const COMPOSE_ME_TOO = /*#__PURE__*/css([], [], function createEmotionStyledRules() {
+  return [{
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'position': 'absolute'
+  }];
+});
 
 var _ref = _jsx('div', {});
 
@@ -63,27 +73,174 @@ export default class Home extends React.Component {
     const spreadBreaksInlineAndConstant = {};
 
     return _jsx('div', {
-      className: css(['css-1s18j1e'], [grow])
+      className: /*#__PURE__*/_css([], [grow], function createEmotionStyledRules(x0) {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': 'column',
+          'flexDirection': 'column',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'WebkitBoxAlign': 'center',
+          'msFlexAlign': 'center',
+          'alignItems': 'center',
+          'WebkitBoxPack': 'center',
+          'msFlexPack': 'center',
+          'justifyContent': 'center',
+          'WebkitBoxFlex': `${x0}`,
+          'msFlexPositive': `${x0}`,
+          'flexGrow': `${x0}`
+        }];
+      })
     }, void 0, _jsx('nav', {
-      className: `${'css-kssq5x'}`
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': 'column',
+          'flexDirection': 'column',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'width': '300px',
+          'height': '30px',
+          'margin': '20px',
+          'backgroundColor': 'purple'
+        }];
+      })
     }), _jsx('div', {
-      className: `${'css-1ibztja'}`
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'WebkitBoxFlex': '0',
+          'msFlexPositive': '0',
+          'flexGrow': '0',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexPreferredSize': '40px',
+          'flexBasis': '40px'
+        }];
+      })
     }), _jsx('div', {
-      className: css(['css-ypm15r'], [this.state.isUpdated ? 'column' : 'row'])
+      className: /*#__PURE__*/_css([], [this.state.isUpdated ? 'column' : 'row'], function createEmotionStyledRules(x0) {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': `${x0}`,
+          'flexDirection': `${x0}`,
+          'height': '200px',
+          'width': '400px'
+        }];
+      })
     }, void 0, _jsx('div', {
-      className: `${'css-10n0dl7'}`
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': 'column',
+          'flexDirection': 'column',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'WebkitBoxFlex': '1',
+          'msFlexPositive': '1',
+          'flexGrow': '1',
+          'backgroundColor': 'red'
+        }];
+      })
     }), _jsx('div', {
-      className: `${'css-asuv6'}`
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': 'column',
+          'flexDirection': 'column',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'WebkitBoxFlex': '1',
+          'msFlexPositive': '1',
+          'flexGrow': '1',
+          'backgroundColor': 'green'
+        }];
+      })
     }), _jsx('div', {
-      className: `${'css-cb9ahb'}`
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': 'column',
+          'flexDirection': 'column',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'WebkitBoxFlex': '1',
+          'msFlexPositive': '1',
+          'flexGrow': '1',
+          'backgroundColor': 'blue'
+        }];
+      })
     })), _jsx('div', {
-      className: `${'css-1ibztja'}`
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'WebkitBoxFlex': '0',
+          'msFlexPositive': '0',
+          'flexGrow': '0',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexPreferredSize': '40px',
+          'flexBasis': '40px'
+        }];
+      })
     }), _jsx('span', {
-      className: `${'css-18gaxx6'}`
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'fontFamily': '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif',
+          'fontSize': '20px'
+        }];
+      })
     }, void 0, 'Home'), _jsx('div', {
-      className: `${'css-1ibztja'}`
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'WebkitBoxFlex': '0',
+          'msFlexPositive': '0',
+          'flexGrow': '0',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexPreferredSize': '40px',
+          'flexBasis': '40px'
+        }];
+      })
     }), _jsx('span', {
-      className: `${'css-15dla7k'}`,
+      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
+        return [{
+          'fontFamily': '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif',
+          'fontSize': '16px',
+          'padding': '16px',
+          'border': '1px solid #111'
+        }];
+      }),
       onClick: this.handleClick
     }, void 0, 'Open Fade Overlay'), _ref2, _jsx('div', {
       className: `will not be transformed to constant`
@@ -92,9 +249,17 @@ export default class Home extends React.Component {
     }), _jsx('div', {
       className: grow
     }), _jsx('div', {
-      className: 'some-class-name' + ' ' + `${'css-qdl783'} ${COMPOSE_ME}`
+      className: 'some-class-name' + ' ' + /*#__PURE__*/_css([COMPOSE_ME], [], function createEmotionStyledRules() {
+        return [{
+          'backgroundColor': 'red'
+        }];
+      })
     }), _jsx('div', {
-      className: `${'css-slos8m'} ${COMPOSE_ME}`
+      className: /*#__PURE__*/_css([COMPOSE_ME], [], function createEmotionStyledRules() {
+        return [{
+          'backgroundColor': 'green'
+        }];
+      })
     }), React.createElement("div", { ref: () => console.log('This messes up constant and inline') }), _jsx('div', {
       className: 'will it be transformed to constant?'
     }, void 0, React.createElement("div", spreadBreaksInlineAndConstant)), _ref3, _ref4);

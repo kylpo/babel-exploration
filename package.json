@@ -21,10 +21,10 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babili-webpack-plugin": "^0.1.2",
-    "constelation-babel": "^15.0.2"
+    "constelation-babel": "^15.0.3"
   },
   "dependencies": {
-    "emotion": "^6.0.3",
+    "emotion": "beta",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   }
