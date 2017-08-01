@@ -20,13 +20,14 @@ var _jsx = function () {
   };
 }();
 
+import { css as _css } from 'emotion';
 import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
-const COMPOSE_ME = `${'css-COMPOSE_ME-16h2ri0'}`;
+const COMPOSE_ME = 'css-COMPOSE_ME-16h2ri0';
 
-const COMPOSE_ME_TOO = `${'css-COMPOSE_ME_TOO-16h2ri0'}`;
+const COMPOSE_ME_TOO = 'css-COMPOSE_ME_TOO-16h2ri0';
 
 var _ref = _jsx('div', {});
 
@@ -41,17 +42,49 @@ class CompositeClassComponent extends React.Component {
   }
 }
 
-var _ref2 = _jsx('div', {
-  className: 'will be transformed to constant'
+var _ref2 = _jsx('nav', {
+  className: "css-kssq5x"
 });
 
 var _ref3 = _jsx('div', {
+  className: "css-1ibztja"
+});
+
+var _ref4 = _jsx('div', {
+  className: "css-10n0dl7"
+});
+
+var _ref5 = _jsx('div', {
+  className: "css-asuv6"
+});
+
+var _ref6 = _jsx('div', {
+  className: "css-cb9ahb"
+});
+
+var _ref7 = _jsx('div', {
+  className: "css-1ibztja"
+});
+
+var _ref8 = _jsx('span', {
+  className: "css-18gaxx6"
+}, void 0, 'Home');
+
+var _ref9 = _jsx('div', {
+  className: "css-1ibztja"
+});
+
+var _ref10 = _jsx('div', {
+  className: 'will be transformed to constant'
+});
+
+var _ref11 = _jsx('div', {
   className: 'will it be transformed to constant?'
 }, void 0, _jsx(CompositeFunctionComponent, {
   something: true
 }));
 
-var _ref4 = _jsx(CompositeClassComponent, {
+var _ref12 = _jsx(CompositeClassComponent, {
   somethingElse: true
 });
 
@@ -63,40 +96,69 @@ export default class Home extends React.Component {
     const spreadBreaksInlineAndConstant = {};
 
     return _jsx('div', {
-      className: css(['css-1s18j1e'], [grow])
-    }, void 0, _jsx('nav', {
-      className: `${'css-kssq5x'}`
-    }), _jsx('div', {
-      className: `${'css-1ibztja'}`
-    }), _jsx('div', {
-      className: css(['css-ypm15r'], [this.state.isUpdated ? 'column' : 'row'])
-    }, void 0, _jsx('div', {
-      className: `${'css-10n0dl7'}`
-    }), _jsx('div', {
-      className: `${'css-asuv6'}`
-    }), _jsx('div', {
-      className: `${'css-cb9ahb'}`
-    })), _jsx('div', {
-      className: `${'css-1ibztja'}`
-    }), _jsx('span', {
-      className: `${'css-18gaxx6'}`
-    }, void 0, 'Home'), _jsx('div', {
-      className: `${'css-1ibztja'}`
-    }), _jsx('span', {
-      className: `${'css-15dla7k'}`,
+      className: /*#__PURE__*/_css([], [grow], function createEmotionStyledRules(x0) {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': 'column',
+          'flexDirection': 'column',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'WebkitBoxAlign': 'center',
+          'msFlexAlign': 'center',
+          'alignItems': 'center',
+          'WebkitBoxPack': 'center',
+          'msFlexPack': 'center',
+          'justifyContent': 'center',
+          'WebkitBoxFlex': `${x0}`,
+          'msFlexPositive': `${x0}`,
+          'flexGrow': `${x0}`
+        }];
+      })
+    }, void 0, _ref2, _ref3, _jsx('div', {
+      className: /*#__PURE__*/_css([], [this.state.isUpdated ? 'column' : 'row'], function createEmotionStyledRules(x0) {
+        return [{
+          'display': '-webkit-box; display: -ms-flexbox; display: flex',
+          'msFlexNegative': '0',
+          'flexShrink': '0',
+          'msFlexLinePack': 'start',
+          'alignContent': 'flex-start',
+          'position': 'relative',
+          'WebkitBoxOrient': 'vertical',
+          'WebkitBoxDirection': 'normal',
+          'msFlexDirection': `${x0}`,
+          'flexDirection': `${x0}`,
+          'height': '200px',
+          'width': '400px'
+        }];
+      })
+    }, void 0, _ref4, _ref5, _ref6), _ref7, _ref8, _ref9, _jsx('span', {
+      className: "css-15dla7k",
       onClick: this.handleClick
-    }, void 0, 'Open Fade Overlay'), _ref2, _jsx('div', {
+    }, void 0, 'Open Fade Overlay'), _ref10, _jsx('div', {
       className: `will not be transformed to constant`
     }), _jsx('div', {
       className: this.state.isUpdated
     }), _jsx('div', {
       className: grow
     }), _jsx('div', {
-      className: 'some-class-name' + ' ' + `${'css-qdl783'} ${COMPOSE_ME}`
+      className: 'some-class-name' + ' ' + /*#__PURE__*/_css([COMPOSE_ME], [], function createEmotionStyledRules() {
+        return [{
+          'backgroundColor': 'red'
+        }];
+      })
     }), _jsx('div', {
-      className: `${'css-slos8m'} ${COMPOSE_ME}`
+      className: /*#__PURE__*/_css([COMPOSE_ME], [], function createEmotionStyledRules() {
+        return [{
+          'backgroundColor': 'green'
+        }];
+      })
     }), React.createElement("div", { ref: () => console.log('This messes up constant and inline') }), _jsx('div', {
       className: 'will it be transformed to constant?'
-    }, void 0, React.createElement("div", spreadBreaksInlineAndConstant)), _ref3, _ref4);
+    }, void 0, React.createElement("div", spreadBreaksInlineAndConstant)), _ref11, _ref12);
   }
 }
