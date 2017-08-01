@@ -21,22 +21,13 @@ var _jsx = function () {
 }();
 
 import { css as _css } from 'emotion';
+import './1-after-constelation.emotion.css';
 import React from 'react';
 import { css } from 'emotion';
 
-const COMPOSE_ME = /*#__PURE__*/css([], [], function createEmotionStyledRules() {
-  return [{
-    'display': '-webkit-box; display: -ms-flexbox; display: flex',
-    'position': 'absolute'
-  }];
-});
+const COMPOSE_ME = 'css-COMPOSE_ME-16h2ri0';
 
-const COMPOSE_ME_TOO = /*#__PURE__*/css([], [], function createEmotionStyledRules() {
-  return [{
-    'display': '-webkit-box; display: -ms-flexbox; display: flex',
-    'position': 'absolute'
-  }];
-});
+const COMPOSE_ME_TOO = 'css-COMPOSE_ME_TOO-16h2ri0';
 
 var _ref = _jsx('div', {});
 
@@ -51,17 +42,49 @@ class CompositeClassComponent extends React.Component {
   }
 }
 
-var _ref2 = _jsx('div', {
-  className: 'will be transformed to constant'
+var _ref2 = _jsx('nav', {
+  className: "css-kssq5x"
 });
 
 var _ref3 = _jsx('div', {
+  className: "css-1ibztja"
+});
+
+var _ref4 = _jsx('div', {
+  className: "css-10n0dl7"
+});
+
+var _ref5 = _jsx('div', {
+  className: "css-asuv6"
+});
+
+var _ref6 = _jsx('div', {
+  className: "css-cb9ahb"
+});
+
+var _ref7 = _jsx('div', {
+  className: "css-1ibztja"
+});
+
+var _ref8 = _jsx('span', {
+  className: "css-18gaxx6"
+}, void 0, 'Home');
+
+var _ref9 = _jsx('div', {
+  className: "css-1ibztja"
+});
+
+var _ref10 = _jsx('div', {
+  className: 'will be transformed to constant'
+});
+
+var _ref11 = _jsx('div', {
   className: 'will it be transformed to constant?'
 }, void 0, _jsx(CompositeFunctionComponent, {
   something: true
 }));
 
-var _ref4 = _jsx(CompositeClassComponent, {
+var _ref12 = _jsx(CompositeClassComponent, {
   somethingElse: true
 });
 
@@ -96,38 +119,7 @@ export default class Home extends React.Component {
           'flexGrow': `${x0}`
         }];
       })
-    }, void 0, _jsx('nav', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'display': '-webkit-box; display: -ms-flexbox; display: flex',
-          'WebkitBoxOrient': 'vertical',
-          'WebkitBoxDirection': 'normal',
-          'msFlexDirection': 'column',
-          'flexDirection': 'column',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexLinePack': 'start',
-          'alignContent': 'flex-start',
-          'position': 'relative',
-          'width': '300px',
-          'height': '30px',
-          'margin': '20px',
-          'backgroundColor': 'purple'
-        }];
-      })
-    }), _jsx('div', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'WebkitBoxFlex': '0',
-          'msFlexPositive': '0',
-          'flexGrow': '0',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexPreferredSize': '40px',
-          'flexBasis': '40px'
-        }];
-      })
-    }), _jsx('div', {
+    }, void 0, _ref2, _ref3, _jsx('div', {
       className: /*#__PURE__*/_css([], [this.state.isUpdated ? 'column' : 'row'], function createEmotionStyledRules(x0) {
         return [{
           'display': '-webkit-box; display: -ms-flexbox; display: flex',
@@ -144,105 +136,10 @@ export default class Home extends React.Component {
           'width': '400px'
         }];
       })
-    }, void 0, _jsx('div', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'display': '-webkit-box; display: -ms-flexbox; display: flex',
-          'WebkitBoxOrient': 'vertical',
-          'WebkitBoxDirection': 'normal',
-          'msFlexDirection': 'column',
-          'flexDirection': 'column',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexLinePack': 'start',
-          'alignContent': 'flex-start',
-          'position': 'relative',
-          'WebkitBoxFlex': '1',
-          'msFlexPositive': '1',
-          'flexGrow': '1',
-          'backgroundColor': 'red'
-        }];
-      })
-    }), _jsx('div', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'display': '-webkit-box; display: -ms-flexbox; display: flex',
-          'WebkitBoxOrient': 'vertical',
-          'WebkitBoxDirection': 'normal',
-          'msFlexDirection': 'column',
-          'flexDirection': 'column',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexLinePack': 'start',
-          'alignContent': 'flex-start',
-          'position': 'relative',
-          'WebkitBoxFlex': '1',
-          'msFlexPositive': '1',
-          'flexGrow': '1',
-          'backgroundColor': 'green'
-        }];
-      })
-    }), _jsx('div', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'display': '-webkit-box; display: -ms-flexbox; display: flex',
-          'WebkitBoxOrient': 'vertical',
-          'WebkitBoxDirection': 'normal',
-          'msFlexDirection': 'column',
-          'flexDirection': 'column',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexLinePack': 'start',
-          'alignContent': 'flex-start',
-          'position': 'relative',
-          'WebkitBoxFlex': '1',
-          'msFlexPositive': '1',
-          'flexGrow': '1',
-          'backgroundColor': 'blue'
-        }];
-      })
-    })), _jsx('div', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'WebkitBoxFlex': '0',
-          'msFlexPositive': '0',
-          'flexGrow': '0',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexPreferredSize': '40px',
-          'flexBasis': '40px'
-        }];
-      })
-    }), _jsx('span', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'fontFamily': '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif',
-          'fontSize': '20px'
-        }];
-      })
-    }, void 0, 'Home'), _jsx('div', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'WebkitBoxFlex': '0',
-          'msFlexPositive': '0',
-          'flexGrow': '0',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexPreferredSize': '40px',
-          'flexBasis': '40px'
-        }];
-      })
-    }), _jsx('span', {
-      className: /*#__PURE__*/_css([], [], function createEmotionStyledRules() {
-        return [{
-          'fontFamily': '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif',
-          'fontSize': '16px',
-          'padding': '16px',
-          'border': '1px solid #111'
-        }];
-      }),
+    }, void 0, _ref4, _ref5, _ref6), _ref7, _ref8, _ref9, _jsx('span', {
+      className: "css-15dla7k",
       onClick: this.handleClick
-    }, void 0, 'Open Fade Overlay'), _ref2, _jsx('div', {
+    }, void 0, 'Open Fade Overlay'), _ref10, _jsx('div', {
       className: `will not be transformed to constant`
     }), _jsx('div', {
       className: this.state.isUpdated
@@ -262,6 +159,6 @@ export default class Home extends React.Component {
       })
     }), React.createElement("div", { ref: () => console.log('This messes up constant and inline') }), _jsx('div', {
       className: 'will it be transformed to constant?'
-    }, void 0, React.createElement("div", spreadBreaksInlineAndConstant)), _ref3, _ref4);
+    }, void 0, React.createElement("div", spreadBreaksInlineAndConstant)), _ref11, _ref12);
   }
 }

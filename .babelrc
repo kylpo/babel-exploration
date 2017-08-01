@@ -3,6 +3,11 @@
     "syntax-jsx",
   ],
   "env": {
+    "extract": {
+      "plugins": [
+        ["emotion/babel", { "extractStatic": true }]
+      ]
+    },
     "inline": {
       "plugins": [
         ["emotion/babel", { "inline": true }]
