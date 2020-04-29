@@ -1,5 +1,5 @@
 import React from 'react'
-import { css } from 'emotion'
+import { css } from 'linaria'
 
 const COMPOSE_ME = css`
   display: flex;
@@ -37,35 +37,35 @@ export default class Home extends React.Component {
           width='300px'
           height='30px'
           margin='20px'
-          css={`
-            background-color: purple;
-          `}
+          style={{
+            backgroundColor: 'purple'
+          }}
         />
 
         <space size='40px' />
 
         <flex
-          direction={this.state.isUpdated ? 'column' : 'row'}
+          direction={'column'}
           height='200px'
           width='400px'
         >
           <view
             grow
-            css={`
-              background-color: red;
-            `}
+            style={{
+              backgroundColor: 'red'
+            }}
           />
           <view
             grow
-            css={`
-              background-color: green;
-            `}
+            style={{
+              backgroundColor: 'green'
+            }}
           />
           <view
             grow
-            css={`
-              background-color: blue;
-            `}
+            style={{
+              backgroundColor: 'blue'
+            }}
           />
         </flex>
 
@@ -80,10 +80,10 @@ export default class Home extends React.Component {
         <text
           size='16px'
           onClick={this.handleClick}
-          css={`
-            padding: 16px;
-            border: 1px solid #111;
-          `}
+          style={{
+            padding: 16,
+            border: '1px solid #111',
+          }}
         >
           Open Fade Overlay
         </text>
@@ -95,18 +95,9 @@ export default class Home extends React.Component {
 
         <div
           className='some-class-name'
-          css={`
-            composes: ${COMPOSE_ME};
-            background-color: red;
-          `}
         />
 
-        <div
-          css={`
-            composes: ${COMPOSE_ME};
-            background-color: green;
-          `}
-        />
+        <div />
 
         <div
           ref={() => console.log('This messes up constant and inline')}

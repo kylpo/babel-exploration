@@ -1,30 +1,34 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run build:constelation && npm run build:emotion && npm run build:constant && npm run build:inline && npm run build:prod && npm run build:jsx && npm run build:emotion-inline && npm run build:prod-inline && npm run build:jsx-inline",
-    "build:constelation": "babel 0-start.js --out-file 1-after-constelation.js --plugins=constelation-babel",
-    "build:emotion": "BABEL_ENV='extract' babel 1-after-constelation.js --out-file 2-after-emotion.js",
-    "build:emotion-inline": "BABEL_ENV='inline' babel 1-after-constelation.js --out-file 2b-after-emotion-inline.js",
-    "build:constant": "babel 2-after-emotion.js --out-file 3a-after-constant.js --plugins=transform-react-constant-elements",
-    "build:inline": "babel 2-after-emotion.js --out-file 3b-after_inline.js --plugins=transform-react-inline-elements",
-    "build:prod": "babel 2-after-emotion.js --out-file 3-after-prod.js --plugins=transform-react-constant-elements,transform-react-inline-elements",
-    "build:prod-inline": "babel 2b-after-emotion-inline.js --out-file 3b-after-prod_inline.js --plugins=transform-react-constant-elements,transform-react-inline-elements",
-    "build:jsx": "babel 3-after-prod.js --out-file 4-after-jsx.js --plugins=transform-react-jsx",
-    "build:jsx-inline": "babel 3b-after-prod_inline.js --out-file 4b-after-jsx_inline.js --plugins=transform-react-jsx"
-  },
+    "build": "npm run build:primitives && npm run build:linaria && npm run build:constant && npm run build:inline && npm run build:prod && npm run build:jsx",
+    "build:primitives": "babel 0-start.js --out-file 1-after-primitives.js --plugins=module:chronstruct-primitives",
+    "build:linaria": "BABEL_ENV='extract' babel 1-after-primitives.js --out-file 2-after-linaria.js",
+    "build:constant": "babel 2-after-linaria.js --out-file 3a-after-constant.js --plugins=@babel/transform-react-constant-elements",
+    "build:inline": "babel 2-after-linaria.js --out-file 3b-after_inline.js --plugins=@babel/transform-react-inline-elements",
+    "build:prod": "babel 2-after-linaria.js --out-file 3-after-prod.js --plugins=@babel/transform-react-constant-elements,@babel/transform-react-inline-elements",
+    "build:jsx": "babel 3-after-prod.js --out-file 4-after-jsx.js --plugins=@babel/transform-react-jsx"
+    },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-react-constant-elements": "^6.23.0",
-    "babel-plugin-transform-react-inline-elements": "^6.22.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "babili-webpack-plugin": "^0.1.2",
-    "constelation-babel": "^15.0.3"
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0",
+    "@babel/plugin-transform-react-inline-elements": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babili-webpack-plugin": "^0.1.2"
   },
   "dependencies": {
-    "emotion": "beta",
+    "linaria": "^1.3.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   }

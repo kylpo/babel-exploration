@@ -1,23 +1,21 @@
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var REACT_ELEMENT_TYPE;
 
-import { css as _css } from 'emotion';
-import './1-after-constelation.emotion.css';
+function _jsx(type, props, key, children) { if (!REACT_ELEMENT_TYPE) { REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol["for"] && Symbol["for"]("react.element") || 0xeac7; } var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = { children: void 0 }; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = new Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }
+
 import React from 'react';
-import { css } from 'emotion';
+import { css } from 'linaria';
+const COMPOSE_ME = "c1ywxa7t";
+const COMPOSE_ME_TOO = "crfpk21";
 
-const COMPOSE_ME = 'css-COMPOSE_ME-16h2ri0';
-
-const COMPOSE_ME_TOO = 'css-COMPOSE_ME_TOO-16h2ri0';
-
-const CompositeFunctionComponent = () => _jsx('div', {});
+const CompositeFunctionComponent = () => /*#__PURE__*/_jsx("div", {});
 
 class CompositeClassComponent extends React.Component {
-
   render() {
-    return _jsx('div', {
+    return /*#__PURE__*/_jsx("div", {
       something: this.context.yep
     });
   }
+
 }
 
 export default class Home extends React.Component {
@@ -26,95 +24,48 @@ export default class Home extends React.Component {
   render() {
     const grow = 1;
     const spreadBreaksInlineAndConstant = {};
-
-    return _jsx('div', {
-      className: /*#__PURE__*/_css([], [grow], function createEmotionStyledRules(x0) {
-        return [{
-          'display': '-webkit-box; display: -ms-flexbox; display: flex',
-          'WebkitBoxOrient': 'vertical',
-          'WebkitBoxDirection': 'normal',
-          'msFlexDirection': 'column',
-          'flexDirection': 'column',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexLinePack': 'start',
-          'alignContent': 'flex-start',
-          'position': 'relative',
-          'WebkitBoxAlign': 'center',
-          'msFlexAlign': 'center',
-          'alignItems': 'center',
-          'WebkitBoxPack': 'center',
-          'msFlexPack': 'center',
-          'justifyContent': 'center',
-          'WebkitBoxFlex': `${x0}`,
-          'msFlexPositive': `${x0}`,
-          'flexGrow': `${x0}`
-        }];
-      })
-    }, void 0, _jsx('nav', {
-      className: "css-kssq5x"
-    }), _jsx('div', {
-      className: "css-1ibztja"
-    }), _jsx('div', {
-      className: /*#__PURE__*/_css([], [this.state.isUpdated ? 'column' : 'row'], function createEmotionStyledRules(x0) {
-        return [{
-          'display': '-webkit-box; display: -ms-flexbox; display: flex',
-          'msFlexNegative': '0',
-          'flexShrink': '0',
-          'msFlexLinePack': 'start',
-          'alignContent': 'flex-start',
-          'position': 'relative',
-          'WebkitBoxOrient': 'vertical',
-          'WebkitBoxDirection': 'normal',
-          'msFlexDirection': `${x0}`,
-          'flexDirection': `${x0}`,
-          'height': '200px',
-          'width': '400px'
-        }];
-      })
-    }, void 0, _jsx('div', {
-      className: "css-10n0dl7"
-    }), _jsx('div', {
-      className: "css-asuv6"
-    }), _jsx('div', {
-      className: "css-cb9ahb"
-    })), _jsx('div', {
-      className: "css-1ibztja"
-    }), _jsx('span', {
-      className: "css-18gaxx6"
-    }, void 0, 'Home'), _jsx('div', {
-      className: "css-1ibztja"
-    }), _jsx('span', {
-      className: "css-15dla7k",
-      onClick: this.handleClick
-    }, void 0, 'Open Fade Overlay'), _jsx('div', {
-      className: 'will be transformed to constant'
-    }), _jsx('div', {
+    return /*#__PURE__*/_jsx("div", {
+      className: "dp4dx06"
+    }, void 0, /*#__PURE__*/_jsx("nav", {
+      className: "nb1nppg"
+    }), /*#__PURE__*/_jsx("div", {
+      className: "d4vyljc"
+    }), /*#__PURE__*/_jsx("div", {
+      className: "d1tgdjja"
+    }, void 0, /*#__PURE__*/_jsx("div", {
+      className: "d1izk7zw"
+    }), /*#__PURE__*/_jsx("div", {
+      className: "dshlvcw"
+    }), /*#__PURE__*/_jsx("div", {
+      className: "d10qko8x"
+    })), /*#__PURE__*/_jsx("div", {
+      className: "d1rlirz7"
+    }), /*#__PURE__*/_jsx("span", {
+      className: "s1q06s0"
+    }, void 0, "Home"), /*#__PURE__*/_jsx("div", {
+      className: "d14b3da4"
+    }), /*#__PURE__*/_jsx("span", {
+      onClick: this.handleClick,
+      className: "s14ofj0y"
+    }, void 0, "Open Fade Overlay"), /*#__PURE__*/_jsx("div", {
+      className: "will be transformed to constant"
+    }), /*#__PURE__*/_jsx("div", {
       className: `will not be transformed to constant`
-    }), _jsx('div', {
+    }), /*#__PURE__*/_jsx("div", {
       className: this.state.isUpdated
-    }), _jsx('div', {
+    }), /*#__PURE__*/_jsx("div", {
       className: grow
-    }), _jsx('div', {
-      className: 'some-class-name' + ' ' + /*#__PURE__*/_css([COMPOSE_ME], [], function createEmotionStyledRules() {
-        return [{
-          'backgroundColor': 'red'
-        }];
-      })
-    }), _jsx('div', {
-      className: /*#__PURE__*/_css([COMPOSE_ME], [], function createEmotionStyledRules() {
-        return [{
-          'backgroundColor': 'green'
-        }];
-      })
-    }), <div ref={() => console.log('This messes up constant and inline')} />, _jsx('div', {
-      className: 'will it be transformed to constant?'
-    }, void 0, <div {...spreadBreaksInlineAndConstant} />), _jsx('div', {
-      className: 'will it be transformed to constant?'
-    }, void 0, _jsx(CompositeFunctionComponent, {
+    }), /*#__PURE__*/_jsx("div", {
+      className: "some-class-name"
+    }), /*#__PURE__*/_jsx("div", {}), <div ref={() => console.log('This messes up constant and inline')} />, /*#__PURE__*/_jsx("div", {
+      className: "will it be transformed to constant?"
+    }, void 0, <div {...spreadBreaksInlineAndConstant} />), /*#__PURE__*/_jsx("div", {
+      className: "will it be transformed to constant?"
+    }, void 0, /*#__PURE__*/_jsx(CompositeFunctionComponent, {
       something: true
-    })), _jsx(CompositeClassComponent, {
+    })), /*#__PURE__*/_jsx(CompositeClassComponent, {
       somethingElse: true
     }));
   }
+
 }
