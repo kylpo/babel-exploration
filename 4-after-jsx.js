@@ -47,7 +47,7 @@ function _jsx(type, props, key, children) {
 }
 
 import React from 'react';
-import { css } from 'linaria';
+import { css, styled } from 'linaria';
 const COMPOSE_ME = "c1ywxa7t";
 const COMPOSE_ME_TOO = "crfpk21";
 
@@ -64,15 +64,25 @@ class CompositeClassComponent extends React.Component {
 
 }
 
-var _ref2 = /*#__PURE__*/_jsx("nav", {
+const StyledH1 = styled.h1`
+background: 'red';
+  font-family: ${families.serif};
+  color: ${props => props.color};
+`;
+
+var _ref2 = /*#__PURE__*/_jsx(StyledH1, {
+  color: "#333"
+});
+
+var _ref3 = /*#__PURE__*/_jsx("nav", {
   className: "nb1nppg"
 });
 
-var _ref3 = /*#__PURE__*/_jsx("div", {
+var _ref4 = /*#__PURE__*/_jsx("div", {
   className: "d4vyljc"
 });
 
-var _ref4 = /*#__PURE__*/_jsx("div", {
+var _ref5 = /*#__PURE__*/_jsx("div", {
   className: "d1tgdjja"
 }, void 0, /*#__PURE__*/_jsx("div", {
   className: "d1izk7zw"
@@ -82,39 +92,39 @@ var _ref4 = /*#__PURE__*/_jsx("div", {
   className: "d10qko8x"
 }));
 
-var _ref5 = /*#__PURE__*/_jsx("div", {
+var _ref6 = /*#__PURE__*/_jsx("div", {
   className: "d1rlirz7"
 });
 
-var _ref6 = /*#__PURE__*/_jsx("span", {
+var _ref7 = /*#__PURE__*/_jsx("span", {
   className: "s1q06s0"
 }, void 0, "Home");
 
-var _ref7 = /*#__PURE__*/_jsx("div", {
+var _ref8 = /*#__PURE__*/_jsx("div", {
   className: "d14b3da4"
 });
 
-var _ref8 = /*#__PURE__*/_jsx("div", {
+var _ref9 = /*#__PURE__*/_jsx("div", {
   className: "will be transformed to constant"
 });
 
-var _ref9 = /*#__PURE__*/_jsx("div", {
+var _ref10 = /*#__PURE__*/_jsx("div", {
   className: `will not be transformed to constant`
 });
 
-var _ref10 = /*#__PURE__*/_jsx("div", {
+var _ref11 = /*#__PURE__*/_jsx("div", {
   className: "some-class-name"
 });
 
-var _ref11 = /*#__PURE__*/_jsx("div", {});
+var _ref12 = /*#__PURE__*/_jsx("div", {});
 
-var _ref12 = /*#__PURE__*/_jsx("div", {
+var _ref13 = /*#__PURE__*/_jsx("div", {
   className: "will it be transformed to constant?"
 }, void 0, /*#__PURE__*/_jsx(CompositeFunctionComponent, {
   something: true
 }));
 
-var _ref13 = /*#__PURE__*/_jsx(CompositeClassComponent, {
+var _ref14 = /*#__PURE__*/_jsx(CompositeClassComponent, {
   somethingElse: true
 });
 
@@ -126,18 +136,20 @@ export default class Home extends React.Component {
     const spreadBreaksInlineAndConstant = {};
     return /*#__PURE__*/_jsx("div", {
       className: "dp4dx06"
-    }, void 0, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, /*#__PURE__*/_jsx("span", {
+    }, void 0, _ref2, /*#__PURE__*/_jsx(StyledH1, {
+      color: this.props.color
+    }), _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, /*#__PURE__*/_jsx("span", {
       onClick: this.handleClick,
       className: "s14ofj0y"
-    }, void 0, "Open Fade Overlay"), _ref8, _ref9, /*#__PURE__*/_jsx("div", {
+    }, void 0, "Open Fade Overlay"), _ref9, _ref10, /*#__PURE__*/_jsx("div", {
       className: this.state.isUpdated
     }), /*#__PURE__*/_jsx("div", {
       className: grow
-    }), _ref10, _ref11, /*#__PURE__*/React.createElement("div", {
+    }), _ref11, _ref12, /*#__PURE__*/React.createElement("div", {
       ref: () => console.log('This messes up constant and inline')
     }), /*#__PURE__*/_jsx("div", {
       className: "will it be transformed to constant?"
-    }, void 0, /*#__PURE__*/React.createElement("div", spreadBreaksInlineAndConstant)), _ref12, _ref13);
+    }, void 0, /*#__PURE__*/React.createElement("div", spreadBreaksInlineAndConstant)), _ref13, _ref14);
   }
 
 }

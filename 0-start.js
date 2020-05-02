@@ -1,5 +1,5 @@
 import React from 'react'
-import { css } from 'linaria'
+import { css, styled } from 'linaria'
 
 const COMPOSE_ME = css`
   display: flex;
@@ -20,6 +20,12 @@ class CompositeClassComponent extends React.Component {
   }
 }
 
+const StyledH1 = styled.h1`
+background: 'red';
+  font-family: ${families.serif};
+  color: ${props => props.color};
+`;
+
 export default class Home extends React.Component {
   handleClick() { }
 
@@ -32,6 +38,11 @@ export default class Home extends React.Component {
         center
         grow={grow}
       >
+
+      <StyledH1 color="#333"/>
+
+      <StyledH1 color={this.props.color} />
+
         <view
           as='nav'
           width='300px'
