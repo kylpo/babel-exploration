@@ -1,5 +1,6 @@
 import React from 'react';
 import { css, styled } from 'linaria';
+import { resolve } from 'styled-jsx/css';
 const COMPOSE_ME = "c1ywxa7t";
 const COMPOSE_ME_TOO = "crfpk21";
 
@@ -19,40 +20,78 @@ background: 'red';
   font-family: ${families.serif};
   color: ${props => props.color};
 `;
+/* 
+static style:
+
+resolve`
+  a { color: green }
+`
+*/
+
+resolve`
+  a { color: green }
+`;
+/* 
+dynamic style:
+
+resolve`
+  color: ${color};
+`
+*/
+
+color => resolve`
+    color: ${color};
+  `;
+/*
+static and dynamic:
+
+resolve`
+    color: ${color};
+    background-color: red;
+  `
+*/
+
+
+color => resolve`
+    color: ${color};
+    background-color: red;
+  `;
 
 var _ref2 = <StyledH1 color="#333" />;
 
-var _ref3 = <nav className={"nb1nppg"} />;
+var _ref3 = <div className={"db1nppg"} />;
 
-var _ref4 = <div className={"d4vyljc"} />;
+var _ref4 = <div as='nav' className={"d1tgdjja"} />;
 
-var _ref5 = <div className={"d1tgdjja"}>
-          <div className={"d1izk7zw"} />
-          <div className={"dshlvcw"} />
+var _ref5 = <div className={"d1izk7zw"} />;
+
+var _ref6 = <div className={"dshlvcw"}>
           <div className={"d10qko8x"} />
+          <div className={"d1rlirz7"} />
+          <div className={"d1q06s0"} />
         </div>;
 
-var _ref6 = <div className={"d1rlirz7"} />;
+var _ref7 = <div className={"d14b3da4"} />;
 
-var _ref7 = <span className={"s1q06s0"}>
+var _ref8 = <span className={"s14ofj0y"}>
           Home
         </span>;
 
-var _ref8 = <div className={"d14b3da4"} />;
+var _ref9 = <div className={"d1ryefa9"} />;
 
-var _ref9 = <div className='will be transformed to constant' />;
+var _ref10 = <div className='will be transformed to constant' />;
 
-var _ref10 = <div className={`will not be transformed to constant`} />;
+var _ref11 = <div className={`will not be transformed to constant`} />;
 
-var _ref11 = <div className='some-class-name' />;
+var _ref12 = <div className='some-class-name' />;
 
-var _ref12 = <div />;
+var _ref13 = <div />;
 
-var _ref13 = <div className='will it be transformed to constant?'>
+var _ref14 = <div className='will it be transformed to constant?'>
           <CompositeFunctionComponent something />
         </div>;
 
-var _ref14 = <CompositeClassComponent somethingElse />;
+var _ref15 = <CompositeClassComponent somethingElse />;
 
 export default class Home extends React.Component {
   handleClick() {}
@@ -60,13 +99,19 @@ export default class Home extends React.Component {
   render() {
     const grow = 1;
     const spreadBreaksInlineAndConstant = {};
-    return <div className={"dp4dx06"}>
+    return <div onMouseEnter={() => console.log("ENTER")} onMouseOver={() => console.log("OVER")} onMouseLeave={() => console.log("LEAVE")} className={"dp4dx06"} style={{
+      flexGrow: grow
+    }}>
 
       {_ref2}
 
       <StyledH1 color={this.props.color} />
 
-        {_ref3}
+      {_ref3}
+
+      <div className={"d4vyljc"} style={{
+        flexBasis: this.props.size
+      }} />
 
         {_ref4}
 
@@ -78,18 +123,20 @@ export default class Home extends React.Component {
 
         {_ref8}
 
-        <span onClick={this.handleClick} className={"s14ofj0y"}>
+        {_ref9}
+
+        <span onClick={this.handleClick} className={"sjo4cu8"}>
           Open Fade Overlay
         </span>
 
-        {_ref9}
         {_ref10}
+        {_ref11}
         <div className={this.state.isUpdated} />
         <div className={grow} />
 
-        {_ref11}
-
         {_ref12}
+
+        {_ref13}
 
         <div ref={() => console.log('This messes up constant and inline')} />
 
@@ -97,9 +144,9 @@ export default class Home extends React.Component {
           <div {...spreadBreaksInlineAndConstant} />
         </div>
 
-        {_ref13}
-
         {_ref14}
+
+        {_ref15}
 
       </div>;
   }

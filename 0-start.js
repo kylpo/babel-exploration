@@ -1,5 +1,6 @@
 import React from 'react'
 import { css, styled } from 'linaria'
+import {resolve} from 'styled-jsx/css'
 
 const COMPOSE_ME = css`
   display: flex;
@@ -26,6 +27,45 @@ background: 'red';
   color: ${props => props.color};
 `;
 
+/* 
+static style:
+
+resolve`
+  a { color: green }
+`
+*/
+resolve`
+  a { color: green }
+`;
+
+/* 
+dynamic style:
+
+resolve`
+  color: ${color};
+`
+*/
+(color) => (
+  resolve`
+    color: ${color};
+  `
+);
+
+/*
+static and dynamic:
+
+resolve`
+    color: ${color};
+    background-color: red;
+  `
+*/
+(color) => (
+  resolve`
+    color: ${color};
+    background-color: red;
+  `
+);
+
 export default class Home extends React.Component {
   handleClick() { }
 
@@ -37,11 +77,18 @@ export default class Home extends React.Component {
       <col
         center
         grow={grow}
+        onMouseEnter={() => console.log("ENTER")}
+        onMouseOver={() => console.log("OVER")}
+        onMouseLeave={() => console.log("LEAVE")}
       >
 
       <StyledH1 color="#333"/>
 
       <StyledH1 color={this.props.color} />
+
+      <space size={{_: 30, 'hover': 60}} />
+
+      <space size={this.props.size} />
 
         <view
           as='nav'

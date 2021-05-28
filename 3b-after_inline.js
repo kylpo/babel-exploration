@@ -4,6 +4,7 @@ function _jsx(type, props, key, children) { if (!REACT_ELEMENT_TYPE) { REACT_ELE
 
 import React from 'react';
 import { css, styled } from 'linaria';
+import { resolve } from 'styled-jsx/css';
 const COMPOSE_ME = "c1ywxa7t";
 const COMPOSE_ME_TOO = "crfpk21";
 
@@ -23,6 +24,43 @@ background: 'red';
   font-family: ${families.serif};
   color: ${props => props.color};
 `;
+/* 
+static style:
+
+resolve`
+  a { color: green }
+`
+*/
+
+resolve`
+  a { color: green }
+`;
+/* 
+dynamic style:
+
+resolve`
+  color: ${color};
+`
+*/
+
+color => resolve`
+    color: ${color};
+  `;
+/*
+static and dynamic:
+
+resolve`
+    color: ${color};
+    background-color: red;
+  `
+*/
+
+
+color => resolve`
+    color: ${color};
+    background-color: red;
+  `;
+
 export default class Home extends React.Component {
   handleClick() {}
 
@@ -30,32 +68,46 @@ export default class Home extends React.Component {
     const grow = 1;
     const spreadBreaksInlineAndConstant = {};
     return /*#__PURE__*/_jsx("div", {
-      className: "dp4dx06"
+      onMouseEnter: () => console.log("ENTER"),
+      onMouseOver: () => console.log("OVER"),
+      onMouseLeave: () => console.log("LEAVE"),
+      className: "dp4dx06",
+      style: {
+        flexGrow: grow
+      }
     }, void 0, /*#__PURE__*/_jsx(StyledH1, {
       color: "#333"
     }), /*#__PURE__*/_jsx(StyledH1, {
       color: this.props.color
-    }), /*#__PURE__*/_jsx("nav", {
-      className: "nb1nppg"
     }), /*#__PURE__*/_jsx("div", {
-      className: "d4vyljc"
+      className: "db1nppg"
     }), /*#__PURE__*/_jsx("div", {
+      className: "d4vyljc",
+      style: {
+        flexBasis: this.props.size
+      }
+    }), /*#__PURE__*/_jsx("div", {
+      as: "nav",
       className: "d1tgdjja"
-    }, void 0, /*#__PURE__*/_jsx("div", {
+    }), /*#__PURE__*/_jsx("div", {
       className: "d1izk7zw"
     }), /*#__PURE__*/_jsx("div", {
       className: "dshlvcw"
-    }), /*#__PURE__*/_jsx("div", {
+    }, void 0, /*#__PURE__*/_jsx("div", {
       className: "d10qko8x"
-    })), /*#__PURE__*/_jsx("div", {
+    }), /*#__PURE__*/_jsx("div", {
       className: "d1rlirz7"
-    }), /*#__PURE__*/_jsx("span", {
-      className: "s1q06s0"
-    }, void 0, "Home"), /*#__PURE__*/_jsx("div", {
+    }), /*#__PURE__*/_jsx("div", {
+      className: "d1q06s0"
+    })), /*#__PURE__*/_jsx("div", {
       className: "d14b3da4"
     }), /*#__PURE__*/_jsx("span", {
-      onClick: this.handleClick,
       className: "s14ofj0y"
+    }, void 0, "Home"), /*#__PURE__*/_jsx("div", {
+      className: "d1ryefa9"
+    }), /*#__PURE__*/_jsx("span", {
+      onClick: this.handleClick,
+      className: "sjo4cu8"
     }, void 0, "Open Fade Overlay"), /*#__PURE__*/_jsx("div", {
       className: "will be transformed to constant"
     }), /*#__PURE__*/_jsx("div", {

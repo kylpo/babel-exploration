@@ -1,6 +1,6 @@
+import _JSXStyle from "styled-jsx/style";
 import React from 'react';
 import { css, styled } from 'linaria';
-import { resolve } from 'styled-jsx/css';
 const COMPOSE_ME = css`
   display: flex;
   position: absolute;
@@ -32,9 +32,10 @@ resolve`
 `
 */
 
-resolve`
-  a { color: green }
-`;
+({
+  styles: <_JSXStyle id={"2875541986"}>{["a.jsx-2875541986{color:green;}"]}</_JSXStyle>,
+  className: "jsx-2875541986"
+});
 /* 
 dynamic style:
 
@@ -43,9 +44,10 @@ resolve`
 `
 */
 
-color => resolve`
-    color: ${color};
-  `;
+color => ({
+  styles: <_JSXStyle id={"3102163213"} dynamic={[color]}>{[`.__jsx-style-dynamic-selector{color:${color};}`]}</_JSXStyle>,
+  className: _JSXStyle.dynamic([["3102163213", [color]]])
+});
 /*
 static and dynamic:
 
@@ -56,10 +58,10 @@ resolve`
 */
 
 
-color => resolve`
-    color: ${color};
-    background-color: red;
-  `;
+color => ({
+  styles: <_JSXStyle id={"2628389215"} dynamic={[color]}>{[`.__jsx-style-dynamic-selector{color:${color};background-color:red;}`]}</_JSXStyle>,
+  className: _JSXStyle.dynamic([["2628389215", [color]]])
+});
 
 export default class Home extends React.Component {
   handleClick() {}

@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run build:primitives && npm run build:linaria && npm run build:constant && npm run build:inline && npm run build:prod && npm run build:jsx",
+    "build": "npm run build:primitives && npm run build:linaria && npm run build:styled-jsx && npm run build:constant && npm run build:inline && npm run build:prod && npm run build:jsx",
     "build:primitives": "babel 0-start.js --out-file 1-after-primitives.js --plugins=module:chronstruct-primitives",
     "build:linaria": "BABEL_ENV='extract' babel 1-after-primitives.js --out-file 2-after-linaria.js",
+    "build:styled-jsx": "BABEL_ENV='styledJsx' babel 1-after-primitives.js --out-file 2-after-styledJsx.js",
     "build:constant": "babel 2-after-linaria.js --out-file 3a-after-constant.js --plugins=@babel/transform-react-constant-elements",
     "build:inline": "babel 2-after-linaria.js --out-file 3b-after_inline.js --plugins=@babel/transform-react-inline-elements",
     "build:prod": "babel 2-after-linaria.js --out-file 3-after-prod.js --plugins=@babel/transform-react-constant-elements,@babel/transform-react-inline-elements",
@@ -30,6 +31,7 @@
   "dependencies": {
     "linaria": "^1.3.3",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "styled-jsx": "^3.2.5"
   }
 }
